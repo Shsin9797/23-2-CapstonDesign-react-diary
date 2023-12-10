@@ -56,8 +56,46 @@ body {
   color: black;
 }
 
+.calendar-day {
+  width: 10%;
+  height:7em;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
+.calendar-weekday {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0; /* 요일 배경색 */
+  font-weight: bold;
+}
+
+.has-diary {
+  background-color: #ffd700; /* 일기가 있는 날짜의 배경색 */
+}
+
+.empty-day {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  visibility: hidden; /* 빈 날짜는 보이지 않도록 설정 */
+}
+
+
 .MyButton_positive {
   background-color: #64c964;
+  color: white;
+}
+.MyButton_unchecked{
+  background-color: rgb(84, 129, 202);
   color: white;
 }
 
@@ -113,12 +151,21 @@ header button {
 
 .DiaryList .menu_wrapper .right_col {
   flex-grow: 1;
+  margin-right : 10px;
+  padding-right : 10px;
 }
 
 .DiaryList .menu_wrapper .right_col button {
   width: 100%;
-}
 
+}
+.DiaryList .menu_wrapper .calendar_view {
+  flex-grow: 0.1;
+}
+.DiaryList .menu_wrapper .calendar_view button {
+  width: 100%;
+  
+}
 .DiaryList .ControlMenu {
   margin-right: 10px;
   border: none;

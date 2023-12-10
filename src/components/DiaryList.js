@@ -82,6 +82,13 @@ const DiaryList = ({ diaryList }) => {
             onClick={() => navigate("/new")}
           />
         </div>
+        <div className="calendar_view">
+          <MyButton 
+          type={"unchecked"}
+          text={"캘린더 보기"}
+          onClick={() => navigate("/calendar")}
+          />
+        </div>
       </div>
 
       {getProcessedDiaryList().map((it) => (
